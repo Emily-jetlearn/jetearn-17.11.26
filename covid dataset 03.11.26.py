@@ -64,3 +64,13 @@ fig3 = px.scatter(top10_recovered, x= top10_recovered.index,
                        color = top10_recovered.index,size_max = 120,
                   title = 'top 10 countries with the most recovered cases')
 fig3.write_html("fig3.html", auto_open = True)
+
+
+# bar graph of recovered cases
+
+figbar = px.bar(top10_recovered, x = top10_recovered.index, y =  "Recovered", 
+                height = 600, color = "Recovered", orientation = "h", 
+                colour_continuous_scale = ['deepskyblue', 'yellow','red'],
+            title = "top 10 countries with the most recovered")
+
+figbar.write_html("figbar.html", auto_open = True)
